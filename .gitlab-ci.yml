@@ -18,6 +18,3 @@ deploy:myapp:
     environment: 
         name: stage01/myapp-test-${CI_PIPELINE_ID} 
     script: echo ${CI_PIPELINE_ID} 
-     only: 
-         variables: 
-             - $NIGHTLY
