@@ -7,14 +7,20 @@
 # test1:
  # script:
  #   - echo "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget massa felis. Aliquam quis aliquet est. Morbi aliquet varius ligula, quis iaculis urna interdum at. Aliquam nec nibh neque. Curabitur ac nibh velit. Nam quis sem purus. Sed sed dui interdum, tristique magna porttitor, pellentesque neque. Nunc accumsan leo vitae ligula tincidunt pharetra. Integer scelerisque placerat eros sit amet ullamcorper. Etiam sit amet leo vestibulum, iaculis nulla a, egestas dolor. Cras quis felis eu erat placerat dapibus. Maecenas quis lorem id tortor elementum commodo. Suspendisse in purus a purus blandit aliquet. Donec interdum scelerisque convallis. Mauris fringilla, felis eu semper finibus, augue mauris sollicitudin nisl, et mattis magna urna vel orci. Vestibulum lacus elit, ullamcorper tempus mi ut, pellentesque pharetra lorem."
-stages: 
-    - stage01
+stages:
+  - build
+  - deploy
 
-variables: 
-    NIGHTLY: "true"
+build:
+  stage: build
+  script:
+    - exit 1
+  when: always
+  allow_failure: false
 
-deploy:myapp: 
-    stage: stage01 
-    environment: 
-        name: stage01/myapp-test-${CI_PIPELINE_ID} 
-    script: echo ${CI_PIPELINE_ID} 
+deploy:
+  stage: deploy
+  script:
+    - echo deploy
+  when: manual
+  allow_failure: false
