@@ -10,6 +10,8 @@ server.mount_proc '/' do |_request, response|
   sleep 0.125 + SecureRandom.random_number*0.250
 end
 
+#Change no. 1
+
 #Return an error to help demonstrate monitoring capabilities
 server.mount_proc '/error' do |_request, response|
   response.status = 500
