@@ -11,6 +11,7 @@ server.mount_proc '/' do |_request, response|
 end
 
 #Change no. 1
+# Change No. 2
 
 #Return an error to help demonstrate monitoring capabilities
 server.mount_proc '/error' do |_request, response|
