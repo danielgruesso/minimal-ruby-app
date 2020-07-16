@@ -8,3 +8,6 @@ docs       @gl-docs
 [Database]
 README.md  @gl-database
 model/db   @gl-database
+
+[Security]
+model/db   @gl-security
