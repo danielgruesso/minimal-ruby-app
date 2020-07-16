@@ -1,0 +1,10 @@
+README.md  @daisy-developer
+
+[Documentation]
+README.md  @gl-docs
+ee/docs    @gl-docs
+docs       @gl-docs
+
+[Database]
+README.md  @gl-database
+model/db   @gl-database
