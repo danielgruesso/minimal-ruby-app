@@ -7,7 +7,7 @@ server = WEBrick::HTTPServer.new :Port => ENV.fetch('PORT'){ 5000 }
 server.mount_proc '/' do |_request, response|
   #TODO: use HTML
   # branch-11
-  response.body = 'Hello product team!'
+  response.body = 'Hello GitLab product team!'
   sleep 0.125 + SecureRandom.random_number*0.250
 end
  
